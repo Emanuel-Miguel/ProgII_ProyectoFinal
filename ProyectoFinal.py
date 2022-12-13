@@ -80,7 +80,11 @@ class Catalogo:
 
     def ultimas10(self):
         print('----------Ultimas peliculas agregadas----------\n\n')
-        for x in range(9,-1,-1):
+        cant = 10
+        if len(self.peliculas)<10:
+            cant = len(self.peliculas)
+
+        for x in range(cant,-1,-1):
             print('###############################################\n')
             print(self.peliculas[x])
             print('')
