@@ -80,7 +80,7 @@ class Catalogo:
 
     def ultimas10(self):
         print('----------Ultimas peliculas agregadas----------\n\n')
-        for i in range(9,-1,-1):
+        for x in range(9,-1,-1):
             print('###############################################\n')
             print(self.peliculas[x])
             print('')
@@ -120,7 +120,7 @@ class Registrados:
 
     def estaRegistrado(self, u):
         esta = False
-        for x in registrados:
+        for x in self.registrados:
             if u == x:
                 esta = True
         return esta
@@ -152,7 +152,7 @@ def datosIncorrectos():
             datosIncorrectos()
             break
 
-def ingresar()
+def ingresar():
     us = input('Usuario: ')
     cont = input('Contrasenia: ')
     usuario = Usuario(us, cont)
@@ -162,7 +162,7 @@ def ingresar()
     else:
         datosIncorrectos()
 
-def registrar()
+def registrar():
     us = input('Usuario: ')
     cont = input('Contrasenia: ') 
     cont2 = input('Repetir contrasenia: ')
